@@ -55,8 +55,8 @@ screen = pygame.display.set_mode((500, 500))
 
 
 
-array = [[random.randint(0, 1) for x in range(100)] for y in range(100)] 
-r = Life(screen, array)
+pixel = [[random.randint(0, 1) for x in range(100)] for y in range(100)] 
+r = Life(screen, pixel)
 
 running = True
 
@@ -69,9 +69,9 @@ while running:
 
 	r.clear()
 	
-	r.draw(array)	
+	r.draw(pixel)	
 
 
 	pygame.display.flip()
-	array = r.render(array)
+	pixel = r.render(pixel)
 	
